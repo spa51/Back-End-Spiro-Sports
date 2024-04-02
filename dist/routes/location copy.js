@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const location_1 = require("../controllers/location");
+const router = (0, express_1.Router)();
+router.get('/', location_1.getLocations);
+router.get('/:id', location_1.getLocation);
+router.delete('/:id', location_1.deleteLocation);
+router.post('/', location_1.postLocation);
+router.put('/:id', location_1.updateLocation);
+router.get('/', location_1.getCategorys);
+router.get('/:id', location_1.getCategory);
+router.delete('/:id', location_1.deleteCategory);
+router.post('/', location_1.postCategory);
+router.put('/:id', location_1.updateCategory);
+exports.default = router;
